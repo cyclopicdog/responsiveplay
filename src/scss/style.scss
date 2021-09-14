@@ -1,0 +1,16 @@
+$color1: #ff0066;
+
+body {
+  background-color: burlywood;
+}
+
+.nav {
+  border: 1px solid $color1;
+  .link {
+    color: $color1;
+    &:hover {
+      background-color: $color1;
+      color: #ffffff;
+    }
+  }
+}
