@@ -1,7 +1,18 @@
 $color1: #ff0066;
+$text: #ffffff;
+$bkg: #771133;
 
-body {
-  background-color: burlywood;
+html {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 18px;
+}
+
+@mixin footerlink {
+  background-color: $bkg;
+  color: $text;
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 .nav {
@@ -12,5 +23,17 @@ body {
       background-color: $color1;
       color: #ffffff;
     }
+  }
+}
+
+.footer {
+  &__heading {
+    font-size: 1rem;
+  }
+  &__link {
+    @include footerlink();
+  }
+  &__p {
+    font-size: 0.6666rem;
   }
 }
